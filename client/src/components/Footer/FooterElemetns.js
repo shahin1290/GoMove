@@ -57,25 +57,4 @@ export const FooterLink = styled(Link)`
     transition: 0.3s ease-out;
   }
 `
-export const SocialIcons = styled.div`
-  margin-top: 5px;
-  display: flex;
-  width: 80%;
-  justify-content: space-between;
-`
-/* export const SocialLogo = styled(Link)`
-  color: #fff;
-  justify-self: start;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1.5em;
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
-  font-weight: bold;
-` */
 
-export const SocialIconLink = styled.a`
-  color: #fff;
-  font-size: 24px;
-`

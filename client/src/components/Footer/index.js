@@ -6,12 +6,9 @@ import {
   FooterLinksWrapper,
   FooterLinksContainer,
   FooterLinkTitle,
-  FooterLink,
-  SocialIcons,
-  SocialIconLink
+  FooterLink
 } from './FooterElemetns'
-
-import { FaFacebook, FaInstagram } from 'react-icons/fa'
+import SocialIcons from '../SocialIcons'
 
 const Footer = () => {
   return (
@@ -28,20 +25,7 @@ const Footer = () => {
               </FooterLink>
               <FooterLink to='/signin'>Read more</FooterLink>
 
-              <SocialIcons>
-                <SocialIconLink to='/' target='_blank' arial-label='Facebook'>
-                  <FaFacebook />
-                </SocialIconLink>
-                <SocialIconLink to='/' target='_blank' arial-label='Instagram'>
-                  <FaInstagram />
-                </SocialIconLink>
-                <SocialIconLink to='/' target='_blank' arial-label='Instagram'>
-                  <FaInstagram />
-                </SocialIconLink>
-                <SocialIconLink to='/' target='_blank' arial-label='Instagram'>
-                  <FaInstagram />
-                </SocialIconLink>
-              </SocialIcons>
+              <SocialIcons />
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle> SITE MAP</FooterLinkTitle>
