@@ -6,6 +6,7 @@ import TopSection from '../components/TopSection'
 import ServiceCard from '../components/ServiceCard'
 import QuoteSection from '../components/QuoteSection'
 import ReviewsSection  from '../components/ReviewsSection'
+import ProcessSection from '../components/ProcessSection';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <QuoteSection />
       <ServiceCard />
       <ReviewsSection />
+      <ProcessSection />
       <Footer />
     </>
   )
