@@ -2,15 +2,17 @@ import { CarouselProvider, Slide, Slider, DotGroup } from 'pure-react-carousel'
 import React from 'react'
 import { Element } from 'react-scroll'
 import styled from 'styled-components'
+import reviewHeroImg from '../../images/review-hero.png'
 
 import 'pure-react-carousel/dist/react-carousel.es.css'
 
 import { ReviewCard } from '../ReviewCard/index'
+import Assistance from '../Assistance'
 
 const SectionContainer = styled.div`
-  height: 700px;
+  height: 557px;
   width: 100%;
-  background-color: orange;
+  background-color: #f8a555;
 `
 
 const ReviewsContainer = styled(Element)`
@@ -18,6 +20,7 @@ const ReviewsContainer = styled(Element)`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  padding-top: 70px;
 `
 
 const StyledCarouselProvider = styled(CarouselProvider)`
@@ -38,36 +41,57 @@ const StyledDotGroup = styled(DotGroup)`
       margin-right: 3px;
     }
   }
-  .carousel__dot--selected {
+  & .carousel__dot--selected {
     background-color: black;
   }
+`
+
+const LeftSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  h1 {
+    margin-bottom: 50px;
+  }
+`
+
+const RightSection = styled.div`
+  display: flex;
+  flex-direction: column;
 `
 
 const ReviewsSection = function (props) {
   return (
     <SectionContainer>
       <ReviewsContainer>
-        <h1>What our client say</h1>
-        <StyledCarouselProvider
-          naturalSlideWidth={200}
-          naturalSlideHeight={50}
-          totalSlides={3}
-        >
-          <Slider>
-            <Slide index={0}>
-              <ReviewCard />
-            </Slide>
-            <Slide index={1}>
-              <ReviewCard />
-            </Slide>
+        <LeftSection>
+          <h1>What our client say __</h1>
+          <img src={reviewHeroImg} alt='reviewHeroImage' />
+        </LeftSection>
 
-            <Slide index={2}>
-              <ReviewCard />
-            </Slide>
-          </Slider>
+        <RightSection>
+          <StyledCarouselProvider
+            naturalSlideWidth={200}
+            naturalSlideHeight={66}
+            totalSlides={3}
+          >
+            <Slider>
+              <Slide index={0}>
+                <ReviewCard />
+              </Slide>
+              <Slide index={1}>
+                <ReviewCard />
+              </Slide>
 
-          <StyledDotGroup />
-        </StyledCarouselProvider>
+              <Slide index={2}>
+                <ReviewCard />
+              </Slide>
+            </Slider>
+
+            <StyledDotGroup />
+          </StyledCarouselProvider>
+
+          <Assistance />
+        </RightSection>
       </ReviewsContainer>
     </SectionContainer>
   )

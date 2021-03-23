@@ -2,9 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import residentialImage from '../../images/moving.jpg'
 
+const SectionContainer = styled.div`
+  height: 500px;
+  width: 100%;
+  background-color: #f2f2f2;
+`
+
 const ServiceContainer = styled.div`
   height: 500px;
-  background-color: #f2f2f2;
   display: flex;
   max-width: 1100px;
   align-items: center;
@@ -17,7 +22,7 @@ const CardContainer = styled.div`
   overflow: hidden;
   width: 300px;
   min-height: 250px;
-  background-color: #fff;
+  background-color: #f8f8f8;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.17);
   margin: 0.5rem;
   margin-bottom: 1.3em;
@@ -39,14 +44,14 @@ const ServiceThumbnail = styled.div`
 const Caption = styled.div`
   position: absolute;
   width: 285px;
-  height: 50px;
+  height: 30px;
   bottom: 0px;
   left: 0px;
   color: #ffffff;
-  background: green;
-  text-align: center;
+  background: #002441;
   font-weight: bold;
-  opacity: 0.7;
+  padding-top: 5px;
+  padding-left: 5px;
 `
 
 const ContentContainer = styled.div`
@@ -57,18 +62,6 @@ const ContentContainer = styled.div`
   padding: 15px 14px;
 `
 
-/* const Title = styled.div`
-  width: 283px;
-  height: 50px;
-  bottom: 0px;
-  left: 0px;
-  color: #ffffff;
-  background: green;
-  text-align: center;
-  font-weight: bold;
-  opacity: 0.7;
-` */
-
 const Text = styled.div`
   color: black;
 `
@@ -76,63 +69,68 @@ const Text = styled.div`
 const Button = styled.button`
   width: 100px;
   height: 40px;
+  background: #f4a654;
+  border: 0;
+  margin-top: 20px;
 `
 
 const ServiceCard = () => {
   return (
-    <ServiceContainer>
-      <CardContainer>
-        <TopContainer>
-          <ServiceThumbnail>
-            <img src={residentialImage} alt='residentialImage' />
-            <Caption>Residential Service</Caption>
-          </ServiceThumbnail>
+    <SectionContainer>
+      <ServiceContainer>
+        <CardContainer>
+          <TopContainer>
+            <ServiceThumbnail>
+              <img src={residentialImage} alt='residentialImage' />
+              <Caption>Residential Service</Caption>
+            </ServiceThumbnail>
 
-          <ContentContainer>
-            <Text>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores
-            </Text>
-            <Button>Read More</Button>
-          </ContentContainer>
-        </TopContainer>
-      </CardContainer>
+            <ContentContainer>
+              <Text>
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque corrupti quos
+                dolores
+              </Text>
+              <Button>Read More</Button>
+            </ContentContainer>
+          </TopContainer>
+        </CardContainer>
 
-      <CardContainer>
-        <TopContainer>
-          <ServiceThumbnail>
-            <img src={residentialImage} alt='residentialImage' />
-            <Caption>Residential Service</Caption>
-          </ServiceThumbnail>
-          <ContentContainer>
-            <Text>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores
-            </Text>
-            <Button>Read More</Button>
-          </ContentContainer>
-        </TopContainer>
-      </CardContainer>
+        <CardContainer>
+          <TopContainer>
+            <ServiceThumbnail>
+              <img src={residentialImage} alt='residentialImage' />
+              <Caption>Residential Service</Caption>
+            </ServiceThumbnail>
+            <ContentContainer>
+              <Text>
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque corrupti quos
+                dolores
+              </Text>
+              <Button>Read More</Button>
+            </ContentContainer>
+          </TopContainer>
+        </CardContainer>
 
-      <CardContainer>
-        <TopContainer>
-          <ServiceThumbnail>
-            <img src={residentialImage} alt='residentialImage' />
-            <Caption>Residential Service</Caption>
-          </ServiceThumbnail>
-          <ContentContainer>
-            <Text>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores
-            </Text>
-            <Button>Read More</Button>
-          </ContentContainer>
-        </TopContainer>
-      </CardContainer>
-    </ServiceContainer>
+        <CardContainer>
+          <TopContainer>
+            <ServiceThumbnail>
+              <img src={residentialImage} alt='residentialImage' />
+              <Caption>Residential Service</Caption>
+            </ServiceThumbnail>
+            <ContentContainer>
+              <Text>
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque corrupti quos
+                dolores
+              </Text>
+              <Button>Read More</Button>
+            </ContentContainer>
+          </TopContainer>
+        </CardContainer>
+      </ServiceContainer>
+    </SectionContainer>
   )
 }
 

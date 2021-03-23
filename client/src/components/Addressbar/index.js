@@ -6,6 +6,7 @@ import { Nav, NavbarContainer } from './AddressbarElements'
 
 const PhoneMailAddress = styled.div`
   display: flex;
+  color: #fff;
 `
 
 const PhoneNumber = styled.div`

@@ -16,7 +16,7 @@ const GridHalfWidth = styled.div`
 `
 
 const StyledButton = styled.button`
-  background: #e6343b;
+  background: #f4a654;
   border: 0;
   color: #fff;
   padding: 1em;

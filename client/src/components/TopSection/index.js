@@ -44,13 +44,18 @@ const ButtonContainer = styled.div`
 `
 
 const Button = styled.button`
-  width: 100px;
+  width: 120px;
   height: 40px;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 10px;
+  text-transform: uppercase;
   &:nth-child(1) {
-    background-color: blue;
+    background-color: #002441;
   }
   &:nth-child(2) {
-    background-color: orange;
+    background-color: #f4a654;
   }
 `
 

@@ -5,12 +5,11 @@ import styled from 'styled-components'
 const IconsContainer = styled.div`
   margin-top: 5px;
   display: flex;
-  width: 80%;
-  justify-content: space-between;
 `
 const SocialIconLink = styled.a`
   color: #fff;
   font-size: 24px;
+  margin-left: 5px;
 `
 
 const SocialIcons = () => {
