@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
 import styled from 'styled-components'
 
 const FormContainer = styled.div`
   background: black;
-  width: 25%;
+  width: 30%;
 `
 
 const Form = styled.form`
@@ -38,10 +39,6 @@ const Input = styled.input`
   width: 100%;
 `
 
-const Label = styled.label`
-  display: block;
-`
-
 const Textarea = styled.textarea`
   border: 1px solid #e6343b;
   padding: 1em;
@@ -52,28 +49,67 @@ const Title = styled.label`
 `
 
 const QuoteForm = () => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+
+  const handleClick = (e) => {
+    e.preventDefault()
+
+    if (e.target.id === 'name') {
+      setName(e.target.value)
+    }
+
+    if (e.target.id === 'email') {
+      setEmail(e.target.value)
+    }
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const dataToSubmit = {
+      name,
+      email
+    }
+
+    axios.post('/api/sendMail', dataToSubmit)
+  }
   return (
     <FormContainer>
       <Title>Get a Quote</Title>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <GridHalfWidth>
-          <Input type='email' placeholder='email' />
+          <Input
+            id='name'
+            type='text'
+            placeholder='Name'
+            onChange={handleClick}
+          />
         </GridHalfWidth>
 
         <GridHalfWidth>
-          <Input type='email' placeholder='email' />
+          <Input
+            id='email'
+            type='email'
+            placeholder='Email'
+            onChange={handleClick}
+          />
         </GridHalfWidth>
 
-        <Input type='text' placeholder='name' />
+        <GridHalfWidth>
+          <Input type='text' placeholder='phone' />
+        </GridHalfWidth>
 
-        <Input type='text' placeholder='company' />
+        <Input type='text' placeholder='Move From' />
+
+        <Input type='text' placeholder='Move To' />
 
         <GridHalfWidth>
           <Textarea placeholder='message' rows='5'></Textarea>{' '}
         </GridHalfWidth>
 
         <GridHalfWidth>
-          <StyledButton>Submit</StyledButton>
+          <StyledButton onClick={handleSubmit}>Submit</StyledButton>
         </GridHalfWidth>
       </Form>
     </FormContainer>
