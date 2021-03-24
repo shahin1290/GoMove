@@ -1,6 +1,5 @@
 import React from 'react'
-import { FaBars } from 'react-icons/fa'
-
+import { RiArrowDownSLine } from 'react-icons/ri'
 import Logo from '../Logo'
 import {
   Nav,
@@ -8,9 +7,8 @@ import {
   NavbarContainer,
   NavItem,
   NavMenu,
-  NavLinks,
-  MobileIcon
-} from './NavbarElements'
+  NavLinks
+} from './NavbarStyling'
 
 const Navbar = () => {
   return (
@@ -21,31 +19,43 @@ const Navbar = () => {
             <Logo />
           </NavLogo>
 
-          <MobileIcon>
-            <FaBars />
-          </MobileIcon>
-
           <NavMenu>
             <NavItem>
-              <NavLinks to='about'>HOME</NavLinks>
+              <NavLinks to='about'>
+                home <RiArrowDownSLine />
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='about'>ABOUT US</NavLinks>
-            </NavItem>
-
-            <NavItem>
-              <NavLinks to='about'>SERVICES</NavLinks>
-            </NavItem>
-
-            <NavItem>
-              <NavLinks to='about'>PAGES</NavLinks>
+              <NavLinks to='about'>
+                about us <RiArrowDownSLine />
+              </NavLinks>
             </NavItem>
 
             <NavItem>
-              <NavLinks to='about'>BLOG</NavLinks>
+              <NavLinks to='about'>
+                services
+                <RiArrowDownSLine />
+              </NavLinks>
+            </NavItem>
+
+            <NavItem>
+              <NavLinks to='about'>
+                pages
+                <RiArrowDownSLine />
+              </NavLinks>
+            </NavItem>
+
+            <NavItem>
+              <NavLinks to='about'>
+                blog
+                <RiArrowDownSLine />
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='about'>CONTACT</NavLinks>
+              <NavLinks to='about'>
+                contact
+                <RiArrowDownSLine />
+              </NavLinks>
             </NavItem>
           </NavMenu>
         </NavbarContainer>

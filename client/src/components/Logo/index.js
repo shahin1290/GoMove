@@ -10,18 +10,23 @@ const LogoImg = styled.img`
 const LogoText = styled.div`
   display: flex;
   flex-direction: column;
+  margin-left: 10px;
 `
 
 const MainText = styled.div`
-  color: red;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
 `
 
 const SubText = styled.div`
-  color: blue;
+  color: #f8a555;
+  font-size: 15px;
 `
 
 const LogoContainer = styled.div`
   display: flex;
+  align-items: center;
 `
 
 const Logo = () => {
@@ -29,8 +34,8 @@ const Logo = () => {
     <LogoContainer>
       <LogoImg src={logo} />
       <LogoText>
-        <MainText>Go MOve</MainText>
-        <SubText>Picker & Mover</SubText>
+        <MainText>GoMove</MainText>
+        <SubText>Packer & Mover</SubText>
       </LogoText>
     </LogoContainer>
   )

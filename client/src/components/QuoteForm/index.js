@@ -18,7 +18,7 @@ const FormHeader = styled.div`
   }
 `
 const FormWrapper = styled.div`
-  background: black;
+  background: #002441;
   width: 30%;
 `
 const Form = styled.form`

@@ -1,36 +1,35 @@
 import React from 'react'
 import SocialIcons from '../SocialIcons/index'
-import styled from 'styled-components'
+import { FaPhoneAlt } from 'react-icons/fa'
+import { HiOutlineMail } from 'react-icons/hi'
 
-import { Nav, NavbarContainer } from './AddressbarElements'
-
-const PhoneMailAddress = styled.div`
-  display: flex;
-  color: #fff;
-`
-
-const PhoneNumber = styled.div`
-  font-size: 14px;
-`
-
-const MailAddress = styled.div`
-  font-size: 14px;
-`
+import {
+  AddressSection,
+  Container,
+  PhoneMailAddress,
+  PhoneNumber,
+  MailAddress,
+  Number,
+  Mail
+} from './AddressbarStyling'
 
 const Addressbar = () => {
   return (
-    <>
-      <Nav>
-        <NavbarContainer>
-          <PhoneMailAddress>
-            <PhoneNumber>+46761256612</PhoneNumber>
-            <MailAddress>shahin.ie@gmail.com</MailAddress>
-          </PhoneMailAddress>
-
-          <SocialIcons />
-        </NavbarContainer>
-      </Nav>
-    </>
+    <AddressSection>
+      <Container>
+        <PhoneMailAddress>
+          <PhoneNumber>
+            <FaPhoneAlt />
+            <Number>+ 1800-365-6548</Number>
+          </PhoneNumber>
+          <MailAddress>
+            <HiOutlineMail />
+            <Mail>sales@salessoliva.com</Mail>
+          </MailAddress>
+        </PhoneMailAddress>
+        <SocialIcons />
+      </Container>
+    </AddressSection>
   )
 }
 
