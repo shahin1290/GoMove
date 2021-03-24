@@ -1,20 +1,13 @@
 const express = require('express')
-const bodyParser = require('body-parser')
-const cookieParser = require('cookie-parser')
+require('dotenv').config()
 
 const app = express()
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
-app.use(cookieParser())
+app.use(express.json())
 
 const { sendMail } = require('./mail')
 
 app.post('/api/sendMail', (req, res) => {
-  const { name, email } = req.body
-
-  console.log(name, email)
-
-  sendMail(email, name, 'hello')
+  sendMail(req.body)
 })
 
 app.listen(3001, () => {

@@ -1,45 +1,23 @@
 const mailer = require('nodemailer')
-const { Hello } = require('./hello_template')
-const { Thanks } = require('./thanks_template')
+const { Quote } = require('./quote_template')
 
-const getMailData = (to, name, template) => {
-  let data = null
-  switch (template) {
-    case 'hello':
-      data = {
-        from: 'Md Shahin Patowary <shahinkona01@gmail.com>',
-        to,
-        subject: `Hello ${name}`,
-        html: Hello()
-      }
-      break
-
-    case 'thanks':
-      data = {
-        from: 'Md Shahin Patowary <shahinkona01@gmail.com>',
-        to,
-        subject: `Hello ${name}`,
-        html: Thanks()
-      }
-      break
-    default:
-      data
-  }
-  return data
-}
-
-const sendMail = (to, name, type) => {
+const sendMail = (data) => {
   const smtpTransport = mailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'shahinkona01@gmail.com',
-      pass: 'shahinkona01'
+      user: process.env.MAIL_USER,
+      pass: process.env.MAIL_PASS
     }
   })
 
-  const mail = getMailData(to, name, type)
+  const mailOptions = {
+    from: `"NodeMailer Contact" ${process.env.MAIL_USER}`,
+    to: 's.patowary@yahoo.com',
+    subject: 'GoMove Contact Request',
+    html: Quote(data)
+  }
 
-  smtpTransport.sendMail(mail, function (err, response) {
+  smtpTransport.sendMail(mailOptions, (err, response) => {
     if (err) {
       console.log(err)
     } else {
