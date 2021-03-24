@@ -1,15 +1,33 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
+import quoteImage from '../../images/quote.png'
 
-const FormContainer = styled.div`
+const FormHeader = styled.div`
+  box-shadow: 0 0.3px 0 #fff;
+  height: 100px;
+  display: flex;
+  h1 {
+    color: #fff;
+  }
+  img {
+    width: 140px;
+    height: 140px;
+    margin-top: -30px;
+    margin-left: -48px;
+  }
+`
+const FormWrapper = styled.div`
   background: black;
   width: 30%;
 `
 const Form = styled.form`
+  width: 290px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 10px;
+  padding: 20px 0;
 `
 const GridHalfWidth = styled.div`
   grid-column: span 2;
@@ -18,7 +36,7 @@ const StyledButton = styled.button`
   background: #f4a654;
   border: 0;
   color: #fff;
-  padding: 1em;
+  padding: 0.5em;
   text-transform: uppercase;
   width: 100%;
   &:hover,
@@ -30,18 +48,14 @@ const StyledButton = styled.button`
   }
 `
 const Input = styled.input`
-  border: 1px solid #e6343b;
-  padding: 1em;
+  padding: 0.5em;
   width: 100%;
 `
 const Textarea = styled.textarea`
-  border: 1px solid #e6343b;
   padding: 1em;
   width: 100%;
 `
-const Title = styled.div`
-  color: #fff;
-`
+
 const Response = styled.div`
   color: #fff;
   font-size: 15px;
@@ -73,8 +87,12 @@ const QuoteForm = () => {
     }
   }
   return (
-    <FormContainer>
-      <Title>Get a Quote</Title>
+    <FormWrapper>
+      {' '}
+      <FormHeader>
+        <img src={quoteImage} alt='quote' />
+        <h1>Get a quote</h1>
+      </FormHeader>
       {message ? <Response>{response}</Response> : null}
       <Form onSubmit={handleSubmit}>
         <GridHalfWidth>
@@ -101,7 +119,7 @@ const QuoteForm = () => {
           <Input
             required
             type='text'
-            placeholder='phone'
+            placeholder='Phone'
             onChange={(e) => setPhone(e.target.value)}
           />
         </GridHalfWidth>
@@ -123,8 +141,8 @@ const QuoteForm = () => {
         <GridHalfWidth>
           <Textarea
             required
-            placeholder='message'
-            rows='5'
+            placeholder='Message'
+            rows='4'
             onChange={(e) => setMessage(e.target.value)}
           ></Textarea>
         </GridHalfWidth>
@@ -133,7 +151,7 @@ const QuoteForm = () => {
           <StyledButton type='submit'>Submit</StyledButton>
         </GridHalfWidth>
       </Form>
-    </FormContainer>
+    </FormWrapper>
   )
 }
 
