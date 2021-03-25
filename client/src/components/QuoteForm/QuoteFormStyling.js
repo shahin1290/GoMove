@@ -67,5 +67,5 @@ export const Textarea = styled.textarea`
 export const Response = styled.div`
   color: #fff;
   font-size: 15px;
-  font-weight: bold;
+  padding: 5px;
 `

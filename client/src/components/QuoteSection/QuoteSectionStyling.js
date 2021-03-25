@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const SectionContainer = styled.div`
-  height: 600px;
+  height: 700px;
   width: 100%;
 `
 

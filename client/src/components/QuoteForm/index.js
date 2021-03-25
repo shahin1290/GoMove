@@ -21,12 +21,12 @@ const QuoteForm = () => {
   const [moveFrom, setMoveFrom] = useState('')
   const [moveTo, setMoveTo] = useState('')
   const [message, setMessage] = useState('')
-  const [response, setResponse] = useState('')
+  const [response, setResponse] = useState([])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      axios.post('/api/sendMail', {
+      const res = await axios.post('/api/sendMail', {
         name,
         email,
         phone,
@@ -34,14 +34,9 @@ const QuoteForm = () => {
         moveTo,
         message
       })
-      setResponse('Successfully sent')
-      setName('')
-      setEmail('')
-      setPhone('')
-      setMoveFrom('')
-      setMoveTo('')
-      setMessage('')
+      setResponse(res.data)
     } catch (error) {
+      console.log(error)
       setResponse('Something went wrong')
     }
   }
@@ -52,7 +47,9 @@ const QuoteForm = () => {
         <img src={quoteImage} alt='quote' />
         <h1>Get a quote</h1>
       </FormHeader>
-      {message ? <Response>{response}</Response> : null}
+      {response.map((res) => (
+        <Response key={res}>{res}</Response>
+      ))}
       <Form onSubmit={handleSubmit}>
         <GridHalfWidth>
           <Input
@@ -95,7 +92,6 @@ const QuoteForm = () => {
 
         <Select
           options={options}
-          value={moveTo}
           required
           placeholder='Move To'
           onChange={({ value }) => {

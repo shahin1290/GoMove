@@ -26,7 +26,7 @@ const sendMail = (data) => {
 
     smtpTransport.sendMail(mailOptions, (err, response) => {
       if (err) {
-        console.log(err)
+        console.log('err')
       } else {
         console.log('success')
       }
