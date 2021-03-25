@@ -9,10 +9,19 @@ const SectionContainer = styled.div`
   background-color: #f2f2f2;
 `
 const SectionWrapper = styled.div`
-  display: flex;
   max-width: 1100px;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
+  h1 {
+    text-align: center;
+    margin: 50px;
+    text-transform: uppercase;
+  }
+`
+
+const ProcessContainer = styled.div`
+  display: flex;
   padding-top: 40px;
 `
 
@@ -70,34 +79,45 @@ const ProcessSection = () => {
     <SectionContainer>
       <SectionWrapper>
         <h1>Our Work Process</h1>
-        <CircleContainer>
-          <Main>
-            <StyledBigIcon />
-            <SmallCircle>
-              <StyledIcon />
-            </SmallCircle>
-          </Main>
-          <StyledArrow />
-        </CircleContainer>
-        <CircleContainer>
-          <Main>
-            <SmallCircle />
-          </Main>
-          <StyledArrow />
-        </CircleContainer>
+        <ProcessContainer>
+          <CircleContainer>
+            <Main>
+              <StyledBigIcon />
+              <SmallCircle>
+                <StyledIcon />
+              </SmallCircle>
+            </Main>
+            <StyledArrow />
+          </CircleContainer>
+          <CircleContainer>
+            <Main>
+              <StyledBigIcon />
+              <SmallCircle>
+                <StyledIcon />
+              </SmallCircle>
+            </Main>
+            <StyledArrow />
+          </CircleContainer>
 
-        <CircleContainer>
-          <Main>
-            <SmallCircle />
-          </Main>
-          <StyledArrow />
-        </CircleContainer>
+          <CircleContainer>
+            <Main>
+              <StyledBigIcon />
+              <SmallCircle>
+                <StyledIcon />
+              </SmallCircle>
+            </Main>
+            <StyledArrow />
+          </CircleContainer>
 
-        <CircleContainer>
-          <Main>
-            <SmallCircle />
-          </Main>
-        </CircleContainer>
+          <CircleContainer>
+            <Main>
+              <StyledBigIcon />
+              <SmallCircle>
+                <StyledIcon />
+              </SmallCircle>
+            </Main>
+          </CircleContainer>
+        </ProcessContainer>
       </SectionWrapper>
     </SectionContainer>
   )

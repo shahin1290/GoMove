@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import Addressbar from '../components/Addressbar'
 import Footer from '../components/Footer'
 import FeatureSection from '../components/FeatureSection'
-import ServiceCard from '../components/ServiceCard'
+import ServicesSection from '../components/ServicesSection'
 import QuoteSection from '../components/QuoteSection'
 import ReviewsSection from '../components/ReviewsSection'
 import ProcessSection from '../components/ProcessSection'
@@ -16,7 +16,7 @@ const Home = () => {
       <Navbar />
       <FeatureSection />
       <QuoteSection />
-      <ServiceCard />
+      <ServicesSection />
       <ReviewsSection />
       <ProcessSection />
       <FaqSection />
