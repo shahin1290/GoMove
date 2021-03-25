@@ -4,7 +4,7 @@ import QuoteForm from '../QuoteForm'
 import deliveryImage from '../../images/delivery.jpeg'
 
 const SectionContainer = styled.div`
-  height: 500px;
+  height: 700px;
   width: 100%;
 `
 
