@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 
 export const SectionContainer = styled.div`
-  height: 500px;
+  height: 600px;
   width: 100%;
   background-color: #f2f2f2;
 `
-
 export const Wrapper = styled.div`
   max-width: 1100px;
   display: flex;
@@ -16,12 +15,10 @@ export const Wrapper = styled.div`
     margin: 30px 0;
   }
 `
-
 export const ServiceContainer = styled.div`
   width: 100%;
   display: flex;
 `
-
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -46,7 +43,6 @@ export const ServiceThumbnail = styled.div`
     height: 100%;
   }
 `
-
 export const Caption = styled.div`
   position: absolute;
   width: 285px;
@@ -59,7 +55,6 @@ export const Caption = styled.div`
   padding-top: 5px;
   padding-left: 5px;
 `
-
 export const ContentContainer = styled.div`
   width: 100%;
   display: flex;

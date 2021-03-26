@@ -18,7 +18,6 @@ const ServiceSection = () => {
     <SectionContainer>
       <Wrapper>
         <h1>Our Services __</h1>
-
         <ServiceContainer>
           <CardContainer>
             <TopContainer>

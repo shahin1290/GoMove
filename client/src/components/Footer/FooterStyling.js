@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const FooterContainer = styled.footer`
-  background-color:  #052236;
+  background-color: #052236;
+  height: 400px;
 `
 export const FooterWrap = styled.div`
   padding: 48px 24px;
@@ -25,11 +26,23 @@ export const FooterLinksWrapper = styled.div`
     flex-direction: column;
   }
 `
+export const Text = styled.div`
+  font-size: 14px;
+  padding: 10px 0;
+`
+
+export const SubText = styled.div`
+  font-size: 15px;
+  padding: 10px 0;
+  color: #f4a654;
+  display: flex;
+  align-items: center;
+`
 export const FooterLinkItems = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 16px;
+  margin: 50px;
   text-align: lef;
   width: 160px;
   box-sizing: border-box;
@@ -44,6 +57,7 @@ export const FooterLinkItems = styled.div`
 export const FooterLinkTitle = styled.h1`
   font-size: 14px;
   margin-bottom: 16px;
+  text-transform: uppercase;
 `
 
 export const FooterLink = styled(Link)`
@@ -56,4 +70,34 @@ export const FooterLink = styled(Link)`
     color: #01bf71;
     transition: 0.3s ease-out;
   }
+`
+
+export const Address = styled.div`
+  font-size: 14px;
+
+  display: flex;
+  div {
+    padding-left: 10px;
+  }
+`
+
+export const PhoneNumber = styled.div`
+  font-size: 14px;
+  display: flex;
+  margin: 15px 0;
+`
+
+export const MailAddress = styled.div`
+  font-size: 14px;
+  display: flex;
+`
+
+export const Number = styled.div`
+  font-size: 14px;
+  margin: 0 9px;
+`
+
+export const Mail = styled.div`
+  font-size: 14px;
+  margin: 0 9px;
 `
