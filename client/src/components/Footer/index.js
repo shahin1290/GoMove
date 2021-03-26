@@ -7,7 +7,7 @@ import {
   FooterLinksContainer,
   FooterLinkTitle,
   FooterLink
-} from './FooterElemetns'
+} from './FooterStyling'
 import SocialIcons from '../SocialIcons'
 
 const Footer = () => {

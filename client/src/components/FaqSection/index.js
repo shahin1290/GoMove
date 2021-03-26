@@ -4,7 +4,7 @@ import Accordion from '../Accordion'
 import ReactPlayer from 'react-player'
 
 const SectionContainer = styled.div`
-  height: 600px;
+  height: 700px;
   width: 100%;
 `
 const SectionWrapper = styled.div`
