@@ -29,7 +29,7 @@ const LogoContainer = styled.div`
   align-items: center;
 `
 
-const Logo = () => {
+const Logo = (props) => {
   return (
     <LogoContainer>
       <LogoImg src={logo} />

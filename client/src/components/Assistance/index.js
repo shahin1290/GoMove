@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaFunnelDollar } from 'react-icons/fa'
+import { FaCalculator, FaPhone, FaDollarSign } from 'react-icons/fa'
 
 const TopContainer = styled.div`
   margin-top: 50px;
@@ -18,6 +18,7 @@ const Title = styled.div`
   font-size: 14px;
   color: #fff;
   margin-top: 20px;
+  font-weight: bold;
 `
 
 const Description = styled.div`
@@ -26,31 +27,45 @@ const Description = styled.div`
   margin-top: 15px;
 `
 
+const StyledIcon = styled.div`
+  color: #fff;
+  font-size: 30px;
+`
+
 const Assistance = () => {
   return (
     <TopContainer>
       <Wrapper>
-        <FaFunnelDollar />
+        <StyledIcon>
+          <FaCalculator />
+        </StyledIcon>
+
         <Title>Free Estimate</Title>
         <Description>
           quae ab illo inventore veritatis et quasi architecto beatae vitae
-          dicta sunt explicabo. 
+          dicta sunt explicabo.
         </Description>
       </Wrapper>
       <Wrapper>
-        <FaFunnelDollar />
-        <Title>Free Estimate</Title>
+        <StyledIcon>
+          <FaPhone />
+        </StyledIcon>
+
+        <Title>24/7 Services</Title>
         <Description>
           quae ab illo inventore veritatis et quasi architecto beatae vitae
-          dicta sunt explicabo. 
+          dicta sunt explicabo.
         </Description>
       </Wrapper>
       <Wrapper>
-        <FaFunnelDollar />
-        <Title>Free Estimate</Title>
+        <StyledIcon>
+          <FaDollarSign />
+        </StyledIcon>
+
+        <Title>Flat Rate Fees</Title>
         <Description>
           quae ab illo inventore veritatis et quasi architecto beatae vitae
-          dicta sunt explicabo. 
+          dicta sunt explicabo.
         </Description>
       </Wrapper>
     </TopContainer>
